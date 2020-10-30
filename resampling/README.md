@@ -1,5 +1,7 @@
 Fiber Resampling
 ======================
+Este código permite remuestrear las fibras correspondientes a la tractografía cerebral de un sujeto; es decir, cada una de las fibras originales pasan a ser representadas por una cantidad constante de puntos equidistantes. Como compromiso entre tamaño de archivo y preservación de la topología, se suelen utilizar 21 puntos por fibra (la gran mayoría de los métodos en este repositorio funcionan bajo este supuesto).
+
 ## Datos de ejemplo
 En el siguiente enlace hay un sujeto de la base de datos ARCHI, con sus fibras originales (sobre-muestreadas y con cantidad variable de puntos).
 https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing
