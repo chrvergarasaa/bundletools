@@ -4,11 +4,9 @@
 
 BundleTools
 ======================
-[![Total Downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
-[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-:star: Star us on GitHub — it helps!
+El objetivo de este repositorio es almacenar y organizar todos los códigos fuente de las herramientras utilizadas para el análisis de tractografía basada en resonancia magntica de difusión (dMRI).
+
 
 [Aimeos](https://aimeos.org/TYPO3) is THE professional, full-featured and
 high performance e-commerce extension for TYPO3!  You can install it in your
