@@ -4,7 +4,7 @@ Este código permite remuestrear las fibras correspondientes a la tractografía 
 
 ## Datos de ejemplo
 En el siguiente enlace hay un sujeto de la base de datos ARCHI, con sus fibras originales (sobre-muestreadas y con cantidad variable de puntos).
-https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing
+https://drive.google.com/drive/folders/16GYcDmWHKoib2U5QnYzT0IepnWCxAvzq?usp=sharing
 
 ## Ejemplo de uso
 
