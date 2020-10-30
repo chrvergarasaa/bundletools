@@ -1,13 +1,13 @@
 FFClust
 ======================
-## Code Dependencies
-To use the code, it is necessary to install the following libraries:
+## Dependencias de Código
+Para utilizar el código, es necesario instalar las siguientes librerías:
 - Numpy: https://numpy.org/
 - Sklearn: https://scikit-learn.org/stable/
 - Scipy: https://www.scipy.org/
 - Networkx: https://networkx.github.io/
 
-### OPTION 1: Dependency installation via pip3 in Ubuntu
+### OPCIÓN 1: Instalación de dependencias via pip3 en Ubuntu
 ```
 pip3 install numpy
 pip3 install scikit-learn
@@ -15,7 +15,7 @@ pip3 install scipy
 pip3 install networkx
 ```
 
-### OPTION 2: Dependency installation via apt in Ubuntu
+### OPCIÓN 2: Instalación de dependencias via apt en Ubuntu
 ```
 sudo apt install python3-numpy
 sudo apt-get install python3-sklearn
@@ -23,39 +23,39 @@ sudo apt install python3-scipy
 sudo apt-get install python3-networkx
 ```
 
-## Example data
-In the following link a subject of the ARCHI database resampled in 21 points is available.
+## Datos de ejemplo
+En el siguiente enlace hay un sujeto de la base de datos ARCHI, con sus fibras remuestreadas a 21 puntos por fibra.
 https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing
 
-## Use example
+## Ejemplo de uso
 
-If necessary, compile before the segmentation code in segmentation_clust_v1.2/
+Si es necesario, compilar antes el código de segmentación en segmentation_clust_v1.2/
 ```
 gcc -fPIC -shared  -O3 -o segmentation.so segmentation.c -fopenmp -ffast-math
 ```
-FFclust algorithm execution:
+Ejecución del algoritmo FFClust:
 ```
-python3 main.py --infile example_data/21ptos-1mfibras-ARCHI.bundles --outdir result
+python3 main.py --infile example_data/example_sub_resampled.bundles --outdir result
 ```
-## Input parameters
-- **--points**: Points to be used in map clustering **Default: 0,3,10,17,20**
-- **--ks**: Number of clusters to be used for each point in K-Means for map **Default: 300, 200, 200, 200, 300**
-- **--thr-seg**: Minimum threshold for segmentation in mm (in paper dRMax) **Default: 6**
-- **--thr-join**: Minimum threshold for join in mm (in paper dMMax) **Default: 6**
-- **--infile**: Input streamlines file (fibers must be resampled in 21 points) in format .bundles/.bundlesdata.
-- **--outdir**: Directory where to place all output
+## Parámetros de entrada
+- **--points**: Puntos a utilizar en el clustering inicial de mapeo (Minibatch K-Means) **Por defecto: 0,3,10,17,20**
+- **--ks**: Número de clusters a utilizar por cada punto en K-means para el mapeo **Por defecto: 300, 200, 200, 200, 300**
+- **--thr-seg**: Umbral mínimo para la segmentación en mm (en el paper: dRMax) **Por defecto: 6**
+- **--thr-join**: Umbral mínimo para la unión/fusión en mm (en el paper: dMMax) **Por defecto: 6**
+- **--infile**: Archivo de tractografía de entrada (las fibras deben estar remuestreadas a 21 puntos por fibra) en formato .bundles y .bundlesdata
+- **--outdir**: Directorio para guardar los archivos de salida
 
-## Input/output data format
-### Input files
-Sample subject is provided in https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing.
-- 21ptos-1mfibras-ARCHI.bundles and 21ptos-1mfibras-ARCHI.bundledata: It is a subject of the archi database, whose fibers are resampled in 21 equidistant points.
+## Formato de datos de entrada/salida
+### Archivos de entrada
+Se dispone de un sujeto de prueba en https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing.
+- example_sub_resampled.bundles y example_sub_resampled.bundlesdata: Corresponde a un sujeto de la base de datos ARCHI, cuyas fibras han sido remuestreadas a 21 puntos equidistantes.
 
-### Output files
-- finalClusters.bundles/ .bundlesdata: This folder contains all the resulting clusters together in .bundles / .bundlesdata format.
-- finalClusters.hie: AIMS hierarchy with the labels and colors of the bundles.
-- centroids.bundles/.bundlesdata: This file contains all the ordered centroids of the clusters. For example, the cluster 0.bundles/bundlesdata corresponds to the centroid that is in position 0 in centroids.bundles/bundlesdata
-- centroids.hie: AIMS hierarchy with the labels and colors of the bundles.
-- stats.log: This file contains the execution time and the number of clusters at each stage of the algorithm.
+### Archivos de salida
+- finalClusters.bundles/.bundlesdata: Esta carpeta contiene todos los clusters resultantes juntos, en formato .bundles/.bundlesdata.
+- finalClusters.hie: Jerarquía AIMS con etiquetas y colores de cada cluster (para visualización, por ejemplo en Anatomist).
+- centroids.bundles/.bundlesdata: Este archivo contiene todos los centroides ordenados de los clusters. Por ejemplo, el cluster 0.bundles/.bundlesdata corresponde al centroide que está en posición 0 en centroids.bundles/bundlesdata.
+- centroids.hie: Jerarquía AIMS con etiquetas y colores de cada centroide.
+- stats.log: Este archivo contiene el tiempo de ejecución y el número de clusters en cada etapa del algoritmo.
 
 ## Referencias
 <a id="1">[1]</a> 
