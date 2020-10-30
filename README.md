@@ -1,5 +1,5 @@
 <a href="https://aimeos.org/">
-    <img src="https://pamelaguevara.icb.udec.cl/wp-content/uploads/2018/11/cropped-cerebroh-192x192.png" alt="GAIM logo" title="GAIM" align="right" height="60" />
+    <img src="https://pamelaguevara.icb.udec.cl/wp-content/uploads/2018/11/cropped-cerebroh-192x192.png" alt="GAIM logo" title="GAIM" align="right" height="192" />
 </a>
 
 BundleTools
