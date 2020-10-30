@@ -24,6 +24,6 @@ Ejecutar:
 Nota: A pesar de que la llamada al código sólo pida el archivo .bundles, el archivo .bundlesdata correspondiente debe estar presente en la misma carpeta que el archivo .bundles.
 
 Authors:
-Narciso López López
-Andrea Vázquez Varela
-Last update: 27-01-2020
+<br>Narciso López López
+<br>Andrea Vázquez Varela
+<br>Last update: 27-01-2020
