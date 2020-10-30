@@ -32,11 +32,13 @@ https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sha
 python filtering.py input_bundle.bundles output_bundle.bundles min_size_in_mm
 ```
 
-- **input_bundle**: Archivo de tractografía de entrada (debe estar remuestreada a 21 puntos).
-- **output_bundle**: Archivo de tractografía filtrada de salida.
+- **input_bundle**: Archivo de tractografía de entrada (debe estar remuestreada a 21 puntos) en formato .bundles.
+- **output_bundle**: Archivo de tractografía filtrada de salida, en formato .bundles y .bundlesdata.
 - **min_size_in_mm**: Tamaño mínimo de fibra en milímetros; cualquier fibra más corta será eliminada.
 
 ## Ejemplo de uso
 ```
 python filtering.py example_sub_resampled.bundles example_sub_resampled_filtered.bundles 40
 ```
+
+Nota: A pesar de que la llamada al código sólo pida el archivo .bundles, el archivo .bundlesdata correspondiente debe estar presente en la misma carpeta que el archivo .bundles.
