@@ -29,7 +29,7 @@ https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sha
 
 ## Sintaxis
 ```
-python filtering.py example_sub_resampled.bundles example_sub_resampled_filtered.bundles 40
+python filtering.py input_bundle.bundles output_bundle.bundles min_size_in_mm
 ```
 
 - **input_bundle**: Archivo de tractografía de entrada (debe estar remuestreada a 21 puntos).
@@ -38,5 +38,5 @@ python filtering.py example_sub_resampled.bundles example_sub_resampled_filtered
 
 ## Ejemplo de uso
 ```
-python filtering.py input_bundle.bundles output_bundle.bundles min_size_in_mm
+python filtering.py example_sub_resampled.bundles example_sub_resampled_filtered.bundles 40
 ```
