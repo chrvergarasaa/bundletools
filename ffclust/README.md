@@ -42,13 +42,15 @@ python3 main.py --infile example_data/example_sub_resampled.bundles --outdir res
 - **--ks**: Número de clusters a utilizar por cada punto en K-means para el mapeo **Por defecto: 300, 200, 200, 200, 300**
 - **--thr-seg**: Umbral mínimo para la segmentación en mm (en el paper: dRMax) **Por defecto: 6**
 - **--thr-join**: Umbral mínimo para la unión/fusión en mm (en el paper: dMMax) **Por defecto: 6**
-- **--infile**: Archivo de tractografía de entrada (las fibras deben estar remuestreadas a 21 puntos por fibra) en formato .bundles y .bundlesdata
+- **--infile**: Archivo de tractografía de entrada (las fibras deben estar remuestreadas a 21 puntos por fibra) en formato .bundles
 - **--outdir**: Directorio para guardar los archivos de salida
 
 ## Formato de datos de entrada/salida
 ### Archivos de entrada
 Se dispone de un sujeto de prueba en https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing.
 - example_sub_resampled.bundles y example_sub_resampled.bundlesdata: Corresponde a un sujeto de la base de datos ARCHI, cuyas fibras han sido remuestreadas a 21 puntos equidistantes.
+
+Nota: A pesar de que la llamada al código sólo pida el archivo .bundles, el archivo .bundlesdata correspondiente debe estar presente en la misma carpeta que el archivo .bundles.
 
 ### Archivos de salida
 - finalClusters.bundles/.bundlesdata: Esta carpeta contiene todos los clusters resultantes juntos, en formato .bundles/.bundlesdata.
