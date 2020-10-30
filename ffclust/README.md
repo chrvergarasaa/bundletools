@@ -1,5 +1,7 @@
 FFClust
 ======================
+Este código corresponde al algoritmo rápido de clustering FFClust [1], aplicable sobre datasets de tractografía cerebral.
+
 ## Dependencias de Código
 Para utilizar el código, es necesario instalar las siguientes librerías:
 - Numpy: https://numpy.org/
@@ -53,7 +55,7 @@ Se dispone de un sujeto de prueba en https://drive.google.com/drive/folders/1-qY
 Nota: A pesar de que la llamada al código sólo pida el archivo .bundles, el archivo .bundlesdata correspondiente debe estar presente en la misma carpeta que el archivo .bundles.
 
 ### Archivos de salida
-- finalClusters.bundles/.bundlesdata: Esta carpeta contiene todos los clusters resultantes juntos, en formato .bundles/.bundlesdata.
+- finalClusters.bundles/.bundlesdata: Este archivo contiene todos los clusters resultantes juntos, en formato .bundles/.bundlesdata.
 - finalClusters.hie: Jerarquía AIMS con etiquetas y colores de cada cluster (para visualización, por ejemplo en Anatomist).
 - centroids.bundles/.bundlesdata: Este archivo contiene todos los centroides ordenados de los clusters. Por ejemplo, el cluster 0.bundles/.bundlesdata corresponde al centroide que está en posición 0 en centroids.bundles/bundlesdata.
 - centroids.hie: Jerarquía AIMS con etiquetas y colores de cada centroide.
