@@ -27,18 +27,16 @@ sudo apt install python3-numpy
 En el siguiente enlace hay un sujeto de la base de datos ARCHI, con sus fibras remuestreadas a 21 puntos por fibra.
 https://drive.google.com/drive/folders/1-qYE4iCXVQHoxkwSgcqW1V2ExnsSvk4D?usp=sharing
 
-## Ejemplo de uso
+## Sintaxis
+```
+python filtering.py example_sub_resampled.bundles example_sub_resampled_filtered.bundles 40
+```
 
-Sintaxis:
-```
-python filtering.py input_bundle.bundles output_bundle.bundles min_size_in_mm
-```
-## Parámetros de entrada
 - **input_bundle**: Archivo de tractografía de entrada (debe estar remuestreada a 21 puntos).
 - **output_bundle**: Archivo de tractografía filtrada de salida.
 - **min_size_in_mm**: Tamaño mínimo de fibra en milímetros; cualquier fibra más corta será eliminada.
 
-Ejemplo:
+## Ejemplo de uso
 ```
-python filtering.py example_sub_resampled.bundles example_sub_resampled_filtered.bundles 40
+python filtering.py input_bundle.bundles output_bundle.bundles min_size_in_mm
 ```
