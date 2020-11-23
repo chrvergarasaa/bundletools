@@ -1,4 +1,4 @@
-Fiber-Mesh Intersection (Modified)
+Fiber-Mesh Intersection
 ======================
 
 Ejecutar el archivo "ejemplo.py" para obtener la intersección entre los fascículos con el mallado cortical. Dentro del archivo se encuentra la ruta de los fascículos y del mallado en esta caperta, los cuales pueden ser modificados para probar con otro sujeto. El "ejemplo.py" llama al Makefile para realizar el cálculo de intersección en C++ de forma paralela.
