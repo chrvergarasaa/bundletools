@@ -67,7 +67,7 @@ for i in range(1,Ns-1):     #Iteración sobre todos los sujetos
     
     #---------- Llamada a código C++ ----------#
     print('\nRhemi direct')
-    sp.call(['./ejemplo', Lhemi_path, '', bundles_path, '', intersection_path, '', membership_path, '', intersection_flag, membership_flag, reverse_flag]);
+    sp.call(['./interx', Lhemi_path, '', bundles_path, '', intersection_path, '', membership_path, '', intersection_flag, membership_flag, reverse_flag]);
     
     print('Tiempo de ejecución: ' + str(time()-t1) + '[s]');
     
@@ -84,7 +84,7 @@ for i in range(1,Ns-1):     #Iteración sobre todos los sujetos
     
     #---------- Llamada a código C++ ----------#
     print('\nLhemi inverse')
-    sp.call(['./ejemplo', Lhemi_path, '', bundles_path, '', intersection_path, '', membership_path, '', intersection_flag, membership_flag, reverse_flag]);
+    sp.call(['./interx', Lhemi_path, '', bundles_path, '', intersection_path, '', membership_path, '', intersection_flag, membership_flag, reverse_flag]);
 
     print('Tiempo de ejecución: ' + str(time()-t1) + '[s]');
 
@@ -102,6 +102,6 @@ for i in range(1,Ns-1):     #Iteración sobre todos los sujetos
     
     #---------- Llamada a código C++ ----------#
     print('\nRhemi inverse')
-    sp.call(['./ejemplo', Lhemi_path, '', bundles_path, '', intersection_path, '', membership_path, '', intersection_flag, membership_flag, reverse_flag]);
+    sp.call(['./interx', Lhemi_path, '', bundles_path, '', intersection_path, '', membership_path, '', intersection_flag, membership_flag, reverse_flag]);
     
     print('Tiempo de ejecución: ' + str(time()-t1) + '[s]');
