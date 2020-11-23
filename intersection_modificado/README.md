@@ -16,7 +16,7 @@ Por defecto, el algoritmo se ejecuta 79 veces, correspondiente a los 79 sujetos 
 - Fascículos/clusters en formato .bundles y .bundlesdata, resampleados a 21 puntos por fibra, y separados en un archivo por cada fascículo/cluster.
 
 ### Archivos de salida
-- Carpeta "/intersection/", que contiene los datos de intersección de cada fascículo con cada hemisferio almacenados en archivos binarios (.intersectiondata), los cuales son:
+- Carpeta "/intersection/", que contiene los datos de intersección de cada fascículo en cada caso (L_hemi_direct, R_hemi_direct, L_hemi_inverse, R_hemi_inverse), almacenados en archivos binarios (.intersectiondata), los cuales son:
 
   - Índice del triángulo que intersecta con el extremo inicial de la fibra.
   - Índice del triángulo que intersecta con el extremo final de la fibra.
@@ -24,7 +24,7 @@ Por defecto, el algoritmo se ejecuta 79 veces, correspondiente a los 79 sujetos 
   - Punto exacto de intersección con el extremo final de la fibra.
   - Índice de la fibra que intersecta con los triángulos.
 
-- Carpeta "/membership/", que contiene los datos de conectividad/pertenencia de cada fascículo con cada hemisferio almacenados en archivos binarios (.intersectiondata), los cuales son:
+- Carpeta "/membership/", que contiene los datos de conectividad/pertenencia de cada fascículo en cada caso (L_hemi_direct, R_hemi_direct, L_hemi_inverse, R_hemi_inverse), almacenados en archivos binarios (.membershipdata). Los valores posibles son:
 
   - (1,1): Cluster intersecta en ambos extremos.
   - (1,0): Cluster sólo intersecta en su extremo inicial.
