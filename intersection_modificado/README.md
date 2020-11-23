@@ -1,14 +1,35 @@
-Fiber-Mesh Intersection
+Fiber-Mesh Intersection (Modified)
 ======================
-Ejecutar el archivo "ejemplo.py" para obtener la intersección entre los fascículos con el mallado cortical. Dentro del archivo se encuentra la ruta de los fascículos y del mallado en esta caperta, los cuales pueden ser modificados para probar con otro sujeto. El "ejemplo.py" llama al Makefile para realizar el cálculo de intersección en C++ de forma paralela.
+Este algoritmo es una modificación de aquel utilizado en [1]. Específicamente, esta versión evalúa la intersección con un hemisferio a la vez, en lugar de ambos al mismo tiempo; además, esta versión también considera el cálculo de los perfiles de conectividad, por lo que no descarta las fibras que intersectan con la corteza en sólo uno de sus extremos (a diferencia del original, que sólo considera aquellas que conectan en ambas extremidades). Para más detalles, leer el extracto de MT incluido en la carpeta.
 
-Luego se genera la carpeta "/intersection/" que contiene los datos de intersección de cada fascículo con cada hemisferio almacenados en archivos binarios, los cuales son:
+## Ejemplo de uso
+Ejecutar (desde la terminal o desde el código fuente, por ejemplo en spyder):
+```
+python3 interx.py
+```
+A diferencia de los algoritmos de preprocesamiento, este código no cuenta con parámetros modificables desde terminal. Por lo tanto, las rutas de los mallados corticales y de los clusters deben ser modificadas directamente en el archivo interx.py.
 
-- Índice del triángulo que intersecta con el extremo inicial de la fibra.
-- Índice del triángulo que intersecta con el extremo final de la fibra.
-- Punto exacto de intersección con el extremo inicial de la fibra.
-- Punto exacto de intersección con el extremo final de la fibra.
-- Índice de la fibra que intersecta con los triángulos.
+Por defecto, el algoritmo se ejecuta 79 veces, correspondiente a los 79 sujetos de la base de datos ARCHI. Esto también se puede modificar en el código interx.py
+
+### Archivos de entrada
+- Mallados corticales en formato .obj, un archivo por cada hemisferio.
+- Fascículos/clusters en formato .bundles y .bundlesdata, resampleados a 21 puntos por fibra, y separados en un archivo por cada fascículo/cluster.
+
+### Archivos de salida
+- Carpeta "/intersection/", que contiene los datos de intersección de cada fascículo con cada hemisferio almacenados en archivos binarios (.intersectiondata), los cuales son:
+
+- - Índice del triángulo que intersecta con el extremo inicial de la fibra.
+- - Índice del triángulo que intersecta con el extremo final de la fibra.
+- - Punto exacto de intersección con el extremo inicial de la fibra.
+- - Punto exacto de intersección con el extremo final de la fibra.
+- - Índice de la fibra que intersecta con los triángulos.
+
+- Carpeta "/membership/", que contiene los datos de conectividad/pertenencia de cada fascículo con cada hemisferio almacenados en archivos binarios (.intersectiondata), los cuales son:
+
+- - (1,1): Cluster intersecta en ambos extremos.
+- - (1,0): Cluster sólo intersecta en su extremo inicial.
+- - (0,0): Cluster no intersecta.
+
 
 ## Referencias
 <a id="1">[1]</a>
