@@ -1,4 +1,6 @@
-# Table of contents
+# Índice
+Los códigos presentados a continuación constituyen las 3 partes del algoritmo de intersección cluster-corteza considerando conexiones ínter-hemisféricas. Por lo tanto, debiesen ejecutarse en forma secuencial, donde la salida de uno es la entrada del siguiente; finalmente, la salida del último código es el conjunto de todas las intersecciones encontradas.
+
 1. [Fiber-Mesh Intersection (Modified)](#intersection)
 2. [Bundle Classification](#bundle_classification)
 3. [Intersection Classification](#intersection_classification)
