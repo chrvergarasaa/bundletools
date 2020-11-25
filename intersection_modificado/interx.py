@@ -8,7 +8,7 @@ from time import time;
 
 Ns = 79 #Número de sujetos. El código asume que los datos de los sujetos se encuentran en carpetas desde "001" hasta "Ns".
 
-for i in range(1,Ns-1):     #Iteración sobre todos los sujetos   
+for i in range(1,Ns+1):     #Iteración sobre todos los sujetos   
     
     #---------- Sujeto a evaluar ----------# 
     if i < 10:
