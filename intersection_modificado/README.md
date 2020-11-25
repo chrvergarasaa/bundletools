@@ -1,7 +1,7 @@
 # Table of contents
 1. [Fiber-Mesh Intersection (Modified)](#intersection)
-2. [Some paragraph](#bundle_classification)
-3. [Another paragraph](#intersection_classification)
+2. [Bundle Classification](#bundle_classification)
+3. [Intersection Classification](#intersection_classification)
 
 ## Fiber-Mesh Intersection (Modified) <a name="intersection"></a>
 Este algoritmo es una modificación de aquel utilizado en [1]. Específicamente, esta versión evalúa la intersección con un hemisferio a la vez, en lugar de ambos al mismo tiempo; además, esta versión también considera el cálculo de los perfiles de conectividad, por lo que no descarta las fibras que intersectan con la corteza en sólo uno de sus extremos (a diferencia del original, que sólo considera aquellas que conectan en ambas extremidades). Para más detalles, leer el extracto de MT incluido en la carpeta.
