@@ -25,10 +25,12 @@ Por defecto, el algoritmo se ejecuta 79 veces, correspondiente a los 79 sujetos 
 - Carpeta "/intersection/", que contiene los datos de intersección de cada fascículo en cada caso (L_hemi_direct, R_hemi_direct, L_hemi_inverse, R_hemi_inverse), almacenados en archivos binarios (.intersectiondata), los cuales son:
 
   - Índice del triángulo que intersecta con el extremo inicial de la fibra.
-  - Índice del triángulo que intersecta con el extremo final de la fibra.
+  - Índice del triángulo que intersecta con el extremo final de la fibra.*
   - Punto exacto de intersección con el extremo inicial de la fibra.
   - Punto exacto de intersección con el extremo final de la fibra.
   - Índice de la fibra que intersecta con los triángulos.
+
+\* Nota: Debido a la naturaleza del algoritmo, las fibras que se consideran potencialmente ínter-hemisferio sólo intersectan en su extremo inicial; es decir, no intersecta con ningún triángulo en su extremo final. En estos casos se guardó un índice de 1000000 para dicho triángulo, y un punto exacto de intersección de (0,0,0).
 
 - Carpeta "/membership/", que contiene los datos de conectividad/pertenencia de cada fascículo en cada caso (L_hemi_direct, R_hemi_direct, L_hemi_inverse, R_hemi_inverse), almacenados en archivos binarios (.membershipdata). Los valores posibles son:
 
