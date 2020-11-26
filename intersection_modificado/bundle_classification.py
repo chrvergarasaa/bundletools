@@ -3,14 +3,10 @@
 
 import os;
 import numpy as np;
-import subprocess as sp;
 from shutil import copyfile, move;
 import glob;
 import utils.bundleTools as bt;
 from time import time;
-import sys;
-
-clustering_method = 'QB_202'
 
 Ns = 79 #Número de sujetos. El código asume que los datos de los sujetos se encuentran en carpetas desde "001" hasta "Ns".
 
@@ -33,16 +29,16 @@ for i in range(1,Ns+1):     #Iteración sobre todos los sujetos
     Rhemi_path = os.getcwd() + '/../../../../../ARCHI/' + sub + '/Meshes/rh.obj'; # Ruta en donde se encuentra el mallado del hemisferio derecho (en formato .obj)
     
     
-    bundles_path = os.getcwd() + '/../isaias_clustering/Brain_fiber_clustering/data/79subjects/inter-clustered_' + clustering_method + '/' + sub + '/individual_aligned_clusters/T1/'; # Ruta en donde se encuentran los clusters del sujeto (en formato .bundles)
+    bundles_path = os.getcwd() + '/../isaias_clustering/Brain_fiber_clustering/data/79subjects/inter-clustered/' + sub + '/individual_aligned_clusters/T1/'; # Ruta en donde se encuentran los clusters del sujeto (en formato .bundles)
 
-    classification_path = os.getcwd() + '/bundle_classification/' + clustering_method + '/'  + sub + '/'; # Ruta en donde se guardarán los bundles clasificados según su tipo de intersección.
+    classification_path = os.getcwd() + '/bundle_classification/'  + sub + '/'; # Ruta en donde se guardarán los bundles clasificados según su tipo de intersección.
     
     cluster_names = [os.path.basename(os.path.splitext(x)[0]) for x in glob.glob(bundles_path + '*.bundles')]; # Lista con nombres de los clusters a evaluar
     
-    Ldirect_path = os.getcwd() + '/membership/' + clustering_method + '/' + sub + '/L-L_direct/'; # Ruta de tupla de conectividad en el caso Ldirect.
-    Linverse_path = os.getcwd() + '/membership/' + clustering_method + '/' + sub + '/L-L_inverse/'; # Ruta de tupla de conectividad en el caso Linverse.
-    Rdirect_path = os.getcwd() + '/membership/' + clustering_method + '/' + sub + '/R-R_direct/'; # Ruta de tupla de conectividad en el caso Rdirect.
-    Rinverse_path = os.getcwd() + '/membership/' + clustering_method + '/' + sub + '/R-R_inverse/'; # Ruta de tupla de conectividad en el caso Rinverse.
+    Ldirect_path = os.getcwd() + '/membership/' + sub + '/L-L_direct/'; # Ruta de tupla de conectividad en el caso Ldirect.
+    Linverse_path = os.getcwd() + '/membership/' + sub + '/L-L_inverse/'; # Ruta de tupla de conectividad en el caso Linverse.
+    Rdirect_path = os.getcwd() + '/membership/' + sub + '/R-R_direct/'; # Ruta de tupla de conectividad en el caso Rdirect.
+    Rinverse_path = os.getcwd() + '/membership/' + sub + '/R-R_inverse/'; # Ruta de tupla de conectividad en el caso Rinverse.
     
     ###---------- Creación de diccionario ----------###
     memb_dict = {}; # Diccionario que contiene la tupla de conectividad de cada cluster.
@@ -124,10 +120,10 @@ for i in range(1,Ns+1):     #Iteración sobre todos los sujetos
         Ri = memb_dict[cluster]['Rinverse']; #Perfil de conectividad en caso Rinverse.
         
         # Lectura de datos de intersección en los cuatro casos posibles (triángulos intersectados, fibras que intersectan).
-        Ld_int = os.getcwd() + '/intersection/' + clustering_method + '/' + sub + '/L-L_direct/' + cluster + '.intersectiondata';
-        Li_int = os.getcwd() + '/intersection/' + clustering_method + '/' + sub + '/L-L_inverse/' + cluster + '.intersectiondata';
-        Rd_int = os.getcwd() + '/intersection/' + clustering_method + '/' + sub + '/R-R_direct/' + cluster + '.intersectiondata';
-        Ri_int = os.getcwd() + '/intersection/' + clustering_method + '/' + sub + '/R-R_inverse/' + cluster + '.intersectiondata';
+        Ld_int = os.getcwd() + '/intersection/' + sub + '/L-L_direct/' + cluster + '.intersectiondata';
+        Li_int = os.getcwd() + '/intersection/' + sub + '/L-L_inverse/' + cluster + '.intersectiondata';
+        Rd_int = os.getcwd() + '/intersection/' + sub + '/R-R_direct/' + cluster + '.intersectiondata';
+        Ri_int = os.getcwd() + '/intersection/' + sub + '/R-R_inverse/' + cluster + '.intersectiondata';
         
         # Variables de conteo para cada caso (intra o inter, y L o R).
         intra_Ld = 0;
