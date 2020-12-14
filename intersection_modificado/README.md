@@ -39,7 +39,14 @@ Por defecto, el algoritmo se ejecuta 79 veces, correspondiente a los 79 sujetos 
   - (0,0): Cluster no intersecta.
 
 ## Bundle Classification <a name="bundle_classification"></a>
-Este algoritmo es una modificación de aquel utilizado en [1]. Específicamente, esta versión evalúa la intersección con un hemisferio a la vez, en lugar de ambos al mismo tiempo; además, esta versión también considera el cálculo de los perfiles de conectividad, por lo que no descarta las fibras que intersectan con la corteza en sólo uno de sus extremos (a diferencia del original, que sólo considera aquellas que conectan en ambas extremidades). Para más detalles, leer el extracto de MT incluido en la carpeta.
+Este algoritmo intenta clasificar los clusters en cuatro categorías distintas:
+
+  - L-L: Clusters intra-hemisferio izquierdo, es decir, sus fibras intersectan el hemisferio izquierdo en ambos extremos.
+  - L-R: 
+  - R-L:
+  - R-R: Clusters intra-hemisferio izquierdo, es decir, sus fibras intersectan el hemisferio derecho en ambos extremos.
+  
+  es una modificación de aquel utilizado en [1]. Específicamente, esta versión evalúa la intersección con un hemisferio a la vez, en lugar de ambos al mismo tiempo; además, esta versión también considera el cálculo de los perfiles de conectividad, por lo que no descarta las fibras que intersectan con la corteza en sólo uno de sus extremos (a diferencia del original, que sólo considera aquellas que conectan en ambas extremidades). Para más detalles, leer el extracto de MT incluido en la carpeta.
 
 ### Ejemplo de uso
 Ejecutar (desde la terminal o desde el código fuente, por ejemplo en spyder):
