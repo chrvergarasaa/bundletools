@@ -214,6 +214,9 @@ with open(atlases[selection] + '_Rparcels.pkl', 'rb') as f:
 lh_dice_dict = defaultdict(int)
 rh_dice_dict = defaultdict(int)
 
+lh_index = defaultdict(int)
+rh_index = defaultdict(int)
+
 # Lista que almacena las parcelas ya utilizadas.
 used = []
 
@@ -247,6 +250,11 @@ for parcel, tris in lh_mine_dict.items():
 #        lh_dice_dict[parcel] = (winner,dice_max)
         used.append(winner)
         
+        lh_index[parcel] = i
+        lh_index[winner] = i
+        
+        i += 1
+        
     # Si no supera el umbral, continuar con la siguiente parcela.
     else:
         continue
@@ -270,6 +278,11 @@ for parcel, tris in rh_mine_dict.items():
         rh_dice_dict[parcel] = winner
 #        rh_dice_dict[parcel] = (winner,dice_max)
         used.append(winner)
+        
+        rh_index[parcel] = i
+        rh_index[winner] = i
+        
+        i += 1
 
     else:
         continue  
