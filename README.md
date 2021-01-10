@@ -1,14 +1,13 @@
-<a href="https://pamelaguevara.icb.udec.cl/grupo-imagenes-medicas/">
-    <img src="https://pamelaguevara.icb.udec.cl/wp-content/uploads/2018/11/cropped-cerebroh-192x192.png" alt="GAIM logo" title="GAIM" align="right" height="192" />
-</a>
-
-dMRI - BundleTools
+Códigos MT
 ======================
 
-El objetivo de este repositorio es almacenar y organizar todos los códigos fuente de las herramientras utilizadas para el análisis de tractografía basada en resonancia magntica de difusión (dMRI), para los miembros del Grupo de Análisis de Imágenes Médicas de la Universidad de Concepción, dirigido por la profesora Pamela Guevara.
+Este repositorio contiene todos los códigos utilizados en el desarrollo de mi MT, los cuales incluyen tanto códigos escritos por mi (filtering, evaluation, intersection_modificado, parcellation, transform), como otros desarrollados por los miembros del Grupo de Análisis de Imágenes Médicas de la Universidad de Concepción, dirigido por la profesora Pamela Guevara. 
 
+Para referencia, mi MT se encuentra en el siguiente enlace:
+https://drive.google.com/file/d/1nqThr1pLAG3f_H_2OSqMHNh5OAFZwMrY/view?usp=sharing
+
+Índice de códigos:
 ======================
-
 * **bundletools:** Librería bundletools, que contiene las funciones utilizadas en los métodos desarrollados para el formato .bundles.
 * **ffclust:** Clustering rápido de fibras cerebrales.
 * **filtering:** Filtrado de fibras cerebrales en base a su largo.
