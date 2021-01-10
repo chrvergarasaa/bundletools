@@ -9,11 +9,12 @@ El objetivo de este repositorio es almacenar y organizar todos los códigos fuen
 
 ======================
 
-* **bundletools (UNDER CONSTRUCTION):** Librería bundletools, que contiene las funciones utilizadas en los métodos desarrollados para el formato .bundles.
+* **bundletools:** Librería bundletools, que contiene las funciones utilizadas en los métodos desarrollados para el formato .bundles.
 * **ffclust:** Clustering rápido de fibras cerebrales.
 * **filtering:** Filtrado de fibras cerebrales en base a su largo.
 * **intersection:** Algoritmo de intersección fascículo-corteza.
 * **intersection_modificado:** Algoritmo de intersección modificado, incluyendo intersecciones ínter-hemisféricas.
+* **parcellation:** Algoritmo de parcelación cortical.
 * **resampling:** Remuestreo de fibras a <img src="https://latex.codecogs.com/svg.latex?N_p" title="N_p" /> puntos equidistantes por fibra.
 * **segmentation:** Algoritmo de segmentación de fibras en base a un atlas.
 * **transform:** Aplicación de transformación afín a fibras cerebrales, para llevarlas de un espacio a otro.
