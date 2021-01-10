@@ -42,8 +42,8 @@ Por defecto, el algoritmo se ejecuta 79 veces, correspondiente a los 79 sujetos 
 Este algoritmo intenta clasificar los clusters en cuatro categorías distintas:
 
   - L-L: Clusters intra-hemisferio izquierdo, es decir, sus fibras intersectan el hemisferio izquierdo en ambos extremos.
-  - L-R: 
-  - R-L:
+  - L-R: Clusters ínter-hemisferio izquierda-derecha, es decir, sus fibras intersectan al hemisferio izquierdo en su extremo inicial, y al hemisferio derecho en su extremo final.
+  - R-L: Clusters ínter-hemisferio derecha-izquierda. Opuestos a los L-R.
   - R-R: Clusters intra-hemisferio izquierdo, es decir, sus fibras intersectan el hemisferio derecho en ambos extremos.
   
   es una modificación de aquel utilizado en [1]. Específicamente, esta versión evalúa la intersección con un hemisferio a la vez, en lugar de ambos al mismo tiempo; además, esta versión también considera el cálculo de los perfiles de conectividad, por lo que no descarta las fibras que intersectan con la corteza en sólo uno de sus extremos (a diferencia del original, que sólo considera aquellas que conectan en ambas extremidades). Para más detalles, leer el extracto de MT incluido en la carpeta.
