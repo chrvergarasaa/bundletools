@@ -27,7 +27,7 @@ for fiber in raw_bundle:
     dist = np.linalg.norm(a-b);
     length = dist*20;
     
-    if length < min_size:
+    if length > min_size:
         filtered_bundle.append(fiber);
         
 bt3.write_bundle(filtered_bundle_path, filtered_bundle);
